@@ -3,6 +3,7 @@ import NET from 'vanta/dist/vanta.net.min';
 import '../styles/App.css';
 import About from './About';
 import Banner from './Banner';
+import Projects from './Projects';
 
 function App() {
   const [vantaEffect, setVantaEffect] = useState(null)
@@ -34,6 +35,7 @@ function App() {
     <div className="App">
       <Banner ref={myRef}/>
       <About />
+      <Projects />
     </div>
   );
 }

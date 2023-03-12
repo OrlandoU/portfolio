@@ -29,19 +29,6 @@
   color: #61dafb;
 }
 
-@keyframes swing-in-top-fwd {
-  0% {
-    transform: rotateX(-100deg);
-    transform-origin: top;
-    opacity: 0;
-  }
-
-  100% {
-    transform: rotateX(0deg);
-    transform-origin: top;
-    opacity: 1;
-  }
-}
 
 section {
   scroll-snap-align: start;
@@ -49,8 +36,10 @@ section {
 
 .name,
 .position {
+  transition: 800ms;
+  opacity: 0;
+  transform: translateY(50px);
   position: relative;
-  animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
 }
 
 .banner,
@@ -109,10 +98,11 @@ section {
   color: white;
   margin: auto;
   padding: 0px;
-  
+
   align-items: center;
 }
-.about-wrapper{
+
+.about-wrapper {
   gap: 36px;
   align-items: center;
   width: fit-content;
@@ -127,7 +117,7 @@ section {
 
 .tech {
   width: 30px;
-  
+
 }
 
 .left-about {

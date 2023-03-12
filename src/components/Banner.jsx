@@ -1,9 +1,15 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
+import { useInView } from "react-intersection-observer"
 
 const Banner = React.forwardRef((props, ref) => {
+    const [viewed, setViewed] = useState()
+
+    useEffect(() => {
+        setViewed(true)
+    }, [])
 
     return (
-        <section className="banner" ref={ref}>
+        <section className={viewed? "banner appear": "banner"} ref={ref}>
             <div className="name">Orlando Jose Umanzor Zelaya</div>
             <div className="position">Full Stack Developer</div>
             <a href="#about" className="banner-svg-container">
