@@ -9,7 +9,6 @@ function Header() {
     useEffect(() => {
         const setState = () => {
             const currentScrollPos = window.pageYOffset;
-            console.log(currentScrollPos)
             if (currentScrollPos === 0) {
                 setScrolled(false)
             } else {
@@ -36,6 +35,11 @@ function Header() {
                     </li>
                     <li>
                         <a href="#projects">Contact</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/OrlandoU">
+                            <i class="devicon-github-original"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
