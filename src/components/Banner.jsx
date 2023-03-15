@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import { useInView } from "react-intersection-observer"
 
 const Banner = React.forwardRef((props, ref) => {
     const [viewed, setViewed] = useState()

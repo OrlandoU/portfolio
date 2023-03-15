@@ -3,6 +3,7 @@ import NET from 'vanta/dist/vanta.net.min';
 import '../styles/App.css';
 import About from './About';
 import Banner from './Banner';
+import Header from './Header';
 import Projects from './Projects';
 
 function App() {
@@ -20,8 +21,8 @@ function App() {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        color: 0xa886fc,
-        backgroundColor: 0x1d1d22,
+        color: 0x4B709F,
+        backgroundColor: 0x1a2e44,
         showDots: false
       }))
     }
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <Banner ref={myRef}/>
       <About />
       <Projects />
