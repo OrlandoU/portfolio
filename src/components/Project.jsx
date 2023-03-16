@@ -1,25 +1,38 @@
-import { useLayoutEffect, useRef, useState } from "react"
-import { Fade } from "react-awesome-reveal"
+import { useEffect, useLayoutEffect, useRef, useState } from "react"
 import FOG from 'vanta/dist/vanta.dots.min';
-
+import { Fade } from "react-reveal"
 
 function Project(props) {
     const [vantaEffect, setVantaEffect] = useState(null)
     const myRef = useRef(null)
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         if (!vantaEffect) {
-            console.log(FOG)
             setVantaEffect(FOG({
                 el: myRef.current,
                 mouseControls: true,
                 touchControls: true,
                 gyroControls: false,
-                color: 0x4B709F,
+                color: props.theme ? 0x4B709F : 0xC8B6A6,
                 scale: 1.00,
                 maxHeight: 380,
                 spacing: 17.00,
-                backgroundColor: 0x1a2e44,
+                backgroundColor: props.theme ? 0x1a2e44 : 0xF1DEC9,
+                scaleMobile: 1.00,
+                showLines: false
+            }))
+        } else {
+            vantaEffect.destroy()
+            setVantaEffect(FOG({
+                el: myRef.current,
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                color: props.theme ? 0x4B709F : 0xC8B6A6,
+                scale: 1.00,
+                maxHeight: 380,
+                spacing: 17.00,
+                backgroundColor: props.theme ? 0x1a2e44 : 0xF1DEC9,
                 scaleMobile: 1.00,
                 showLines: false
             }))
@@ -28,7 +41,10 @@ function Project(props) {
         return () => {
             if (vantaEffect) vantaEffect.destroy()
         }
-    }, [vantaEffect])
+    }, [props.theme])
+
+
+
     const { title, description, image, technologies, liveDemo, sourceCode } = props
     const equivalents = {
         React: < i class="devicon-react-original colored" ></i>,
@@ -45,52 +61,58 @@ function Project(props) {
     if (props.side) {
         return (
             <li className="project" ref={myRef}>
-                <div className="project-details">
-                    <Fade cascade damping={0.3} direction='up' triggerOnce>
+                <Fade fraction={.5} cascade up>
+                    <div className="project-details">
                         <h2>{title}</h2>
                         <div className="project-techs">
                             {technologies.map(tech => (
                                 equivalents[tech]
                             ))}
                         </div>
+                        <div className="project-img mini">
+                            <img src={image} alt="Project" />
+                        </div>
                         <div className="project-description">{description}</div>
                         <div className="project-links">
-                            <a href={liveDemo} rel='noreferrer' target="_blank">Live Demo</a>
-                            <a href={sourceCode} rel='noreferrer' target="_blank">Source Code</a>
+                            <a href={liveDemo} rel='noreferrer' target="_blank"><span>Live Demo</span></a>
+                            <a href={sourceCode} rel='noreferrer' target="_blank"><span>Source Code</span></a>
                         </div>
-                    </Fade>
-                </div>
-                <div className="project-img">
-                    <Fade direction="left" triggerOnce>
+                    </div>
+                </Fade>
+                <Fade fraction={.5} right>
+                    <div className="project-img">
                         <img src={image} alt="Project" />
-                    </Fade>
-                </div>
+                    </div>
+                </Fade>
             </li>
         )
     }
 
     return (
         <li className="project" ref={myRef}>
-            <div className="project-img">
-                <Fade direction="left" triggerOnce>
+            <Fade fraction={.5} left>
+                <div className="project-img">
                     <img src={image} alt="Project" />
-                </Fade>
-            </div>
-            <div className="project-details right">
-                <Fade cascade damping={0.3} direction='up' triggerOnce>
+                </div>
+            </Fade>
+            <Fade fraction={.5} cascade up>
+                <div className="project-details right">
                     <h2>{title}</h2>
                     <div className="project-techs">
-                            {technologies.map(tech => (
-                                equivalents[tech]
-                            ))}
+                        {technologies.map(tech => (
+                            equivalents[tech]
+                        ))}
+                    </div>
+                    <div className="project-img mini">
+                        <img src={image} alt="Project" />
                     </div>
                     <div className="project-description">{description}</div>
                     <div className="project-links">
-                        <a href={liveDemo} rel='noreferrer' target="_blank">Live Demo</a>
-                        <a href={sourceCode} rel='noreferrer' target="_blank">Source Code</a>
+                        <a href={liveDemo} rel='noreferrer' target="_blank"><span>Live Demo</span></a>
+                        <a href={sourceCode} rel='noreferrer' target="_blank"><span>Source Code</span></a>
                     </div>
-                </Fade>
-            </div>
+                </div>
+            </Fade>
         </li>
     )
 }

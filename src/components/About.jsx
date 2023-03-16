@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Fade } from "react-awesome-reveal"
+import { Fade } from "react-reveal"
 import { useInView } from "react-intersection-observer"
 
 function About() {
@@ -14,13 +14,13 @@ function About() {
 
     return (
         <section id="about" className="about" ref={ref}>
+            <h1 className="title">
+                <span>
+                    About Me
+                </span>
+            </h1>
             <div className="about-wrapper">
-                <h1 className="title">
-                    <span>
-                        About Me
-                    </span>
-                </h1>
-                <Fade triggerOnce direction="left">
+                <Fade triggerOnce up>
                     <div className="left-about">
                         <p>Welcome to my portfolio! My name is <strong>Orlando Jose Umanzor Zelaya</strong> and I am a web developer who has been working on various projects through The Odin Project for the past year.</p>
                         <p>During this time, I have gained hands-on experience using a variety of technologies including <strong>React</strong>, <strong>JavaScript</strong>, <strong>CSS</strong>, and <strong>HTML</strong>. I am passionate about creating responsive and engaging web applications that solve real-world problems.</p>
@@ -29,8 +29,8 @@ function About() {
                         <p>Feel free to take a look at my portfolio to see some of the projects I have worked on. If you have any questions or would like to collaborate, please don't hesitate to get in touch!</p>
                     </div>
                 </Fade>
-                <div className="right-about">
-                    <Fade cascade direction="up" damping={0.2} triggerOnce>
+                <Fade cascade up delay={200}>
+                    <div className="right-about">
                         <i className="devicon-javascript-plain colored"></i>
                         <i className="devicon-css3-plain colored" ></i>
                         <i className="devicon-html5-plain colored" ></i>
@@ -40,8 +40,8 @@ function About() {
                         <i className="devicon-jest-plain colored"  ></i>
                         <i className="devicon-npm-original-wordmark colored"  ></i>
                         <i className="devicon-git-plain colored"  ></i>
-                    </Fade>
-                </div>
+                    </div>
+                </Fade>
             </div>
         </section>
 
