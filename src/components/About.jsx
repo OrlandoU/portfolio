@@ -22,11 +22,16 @@ function About() {
             <div className="about-wrapper">
                 <Fade triggerOnce up>
                     <div className="left-about">
-                        <p>Welcome to my portfolio! My name is <strong>Orlando Jose Umanzor Zelaya</strong> and I am a web developer who has been working on various projects through The Odin Project for the past year.</p>
-                        <p>During this time, I have gained hands-on experience using a variety of technologies including <strong>React</strong>, <strong>JavaScript</strong>, <strong>CSS</strong>, and <strong>HTML</strong>. I am passionate about creating responsive and engaging web applications that solve real-world problems.</p>
-                        <p>My journey as a web developer began when I discovered The Odin Project, which provided me with a structured and comprehensive curriculum to learn web development. Since then, I have been building projects and honing my skills through practice and experimentation.</p>
-                        <p>Aside from web development, I enjoy spending my free time exploring new technologies, learning new programming languages, and contributing to open-source projects.</p>
-                        <p>Feel free to take a look at my portfolio to see some of the projects I have worked on. If you have any questions or would like to collaborate, please don't hesitate to get in touch!</p>
+                        <h2>Welcome to My Portfolio!</h2>
+                        <p>
+                            My name is Orlando Jose Umanzor Zelaya, and I am a web developer with experience working on various projects through The Odin Project. I specialize in creating responsive and engaging web applications using technologies such as React, JavaScript, CSS, and HTML. I have also gained hands-on experience with technologies like MongoDB, Node.js, and Express.js.
+                        </p>
+                        <p>
+                            I am passionate about solving real-world problems through web development and have been refining my skills by building projects and exploring new technologies. Additionally, I enjoy staying up-to-date with industry trends and learning new programming languages to expand my skill set.
+                        </p>
+                        <p>
+                            Please take a moment to explore my portfolio and see some of the projects I have worked on. If you have any questions or would like to collaborate, feel free to get in touch!
+                        </p>
                     </div>
                 </Fade>
                 <Fade cascade up delay={200}>
@@ -38,8 +43,12 @@ function About() {
                         <i className="devicon-webpack-plain colored"></i>
                         <i className="devicon-firebase-plain colored" ></i>
                         <i className="devicon-jest-plain colored"  ></i>
-                        <i className="devicon-npm-original-wordmark colored"  ></i>
+                        <i className="devicon-npm-original-wordmark colored"></i>
                         <i className="devicon-git-plain colored"  ></i>
+                        <i class="devicon-typescript-plain colored"></i>
+                        <i class="devicon-nodejs-plain-wordmark colored"></i>
+                        < i class="devicon-express-original-wordmark colored" ></i >
+                        < i class="devicon-mongodb-plain-wordmark colored" ></i >
                     </div>
                 </Fade>
             </div>

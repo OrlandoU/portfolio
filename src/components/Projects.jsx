@@ -4,9 +4,24 @@ import ResumeImg from '../assets/Resume.png'
 import todoImg from '../assets/TO-DO.png'
 import shopImg from '../assets/Shop.png'
 import weatherImg from '../assets/Weather.png'
+import odinbookImg from '../assets/odinbook.png'
 
 function Projects(props) {
     const projects = [
+        {
+            title: "OdinBook",
+            description: (
+                <>
+                    <p>In the "Odin Book" project, a replica of Facebook, the technologies used include the <strong>MERN stack</strong> (MongoDB, Express.js, React, and Node.js) with <strong>Mongoose</strong> for data modeling, <strong>Passport</strong> for authentication, <strong>Firebase</strong> for image storage, and <strong>TypeScript</strong> on the backend.</p>
+                    <p>React Routing was employed for client-side routing, allowing for dynamic page rendering based on user actions. Firebase served as a secure storage solution for user profiles, posts, and followers. Firebase Authentication ensured secure user login functionality.</p>
+                    <p>By integrating these technologies, a feature-rich social media platform, the "Odin Book," was created. It demonstrates proficiency in the MERN stack, along with the ability to integrate additional technologies for specific functionalities. The result is a reliable and secure platform that replicates the core features of Facebook.</p>
+                </>
+            ),
+            image: odinbookImg,
+            technologies: ["React", "Node", 'Mongo' , "Typescript", 'Css', 'Firebase', 'Git', 'Npm', 'Express'],
+            liveDemo: "https://orlandou.github.io/odin-book/",
+            sourceCode: "https://github.com/OrlandoU/odin-book",
+        },
         {
             title: "Twitter Replica",
             description: (
@@ -83,7 +98,7 @@ function Projects(props) {
             <div className="projects-wrapper">
                 <ul className="projects-list">
                     {projects.map((project, index) => (
-                        <Project key={index} {...project} side={index % 2 === 0} theme={props.theme}/>
+                        <Project key={index} {...project} side={index % 2 === 0} theme={props.theme} />
                     ))}
                 </ul>
             </div>

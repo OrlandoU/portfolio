@@ -54,8 +54,11 @@ function Project(props) {
         Webpack: <i class="devicon-webpack-plain colored"></i>,
         Git: <i class="devicon-git-plain colored"></i>,
         Npm: <i class="devicon-npm-original-wordmark colored"></i>,
-        Firebase: <i class="devicon-firebase-plain colored"></i>
-
+        Firebase: <i class="devicon-firebase-plain colored"></i>,
+        Typescript: <i class="devicon-typescript-plain colored"></i>,
+        Node: <i class="devicon-nodejs-plain-wordmark colored"></i>,
+        Express: < i class="devicon-express-original-wordmark colored" ></i >,
+        Mongo:< i class="devicon-mongodb-plain-wordmark colored" ></i >,
     }
 
     if (props.side) {
