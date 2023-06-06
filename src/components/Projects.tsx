@@ -5,9 +5,20 @@ import todoImg from '../assets/TO-DO.png'
 import shopImg from '../assets/Shop.png'
 import weatherImg from '../assets/Weather.png'
 import odinbookImg from '../assets/odinbook.png'
+import { ReactElement } from "react"
+import React from "react"
 
-function Projects(props) {
-    const projects = [
+export interface ProjectI {
+    title: string;
+    description: JSX.Element;
+    image: string;
+    technologies: string[];
+    liveDemo: string;
+    sourceCode: string;
+}
+
+function Projects(props: {theme: boolean}): ReactElement {
+    const projects: ProjectI[] = [
         {
             title: "OdinBook",
             description: (
@@ -23,7 +34,7 @@ function Projects(props) {
             sourceCode: "https://github.com/OrlandoU/odin-book",
         },
         {
-            title: "Twitter Replica",
+            title: 'Twitter Replica',
             description: (
                 <>
                     <p>In this project, I created a Twitter replica using <strong>React Routing</strong> and <strong>Firebase</strong>. <strong>React Routing</strong> was used for client-side routing, allowing for dynamic page rendering based on user actions. <strong>Firebase</strong> was used for secure data storage, including user profiles, tweets, and followers. <strong>Firebase Authentication</strong> was also implemented for secure user login functionality. By combining these technologies, I was able to create a seamless user experience while ensuring data security and reliability.</p>

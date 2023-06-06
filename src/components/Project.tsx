@@ -1,10 +1,22 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react"
+import { ReactElement, useEffect, useRef, useState } from "react"
 import FOG from 'vanta/dist/vanta.dots.min';
-import { Fade } from "react-reveal"
+import React from "react";
+import { ProjectI } from "./Projects";
+import {Fade} from 'react-reveal'
 
-function Project(props) {
-    const [vantaEffect, setVantaEffect] = useState(null)
-    const myRef = useRef(null)
+interface ProjectProps extends ProjectI {
+    theme: boolean,
+    side: boolean
+}
+
+interface TechIcon {
+    [key: string]: JSX.Element;
+}
+
+
+function Project(props: ProjectProps): ReactElement {
+    const [vantaEffect, setVantaEffect] = useState<any>(null)
+    const myRef = useRef<HTMLLIElement>(null)
 
     useEffect(() => {
         if (!vantaEffect) {
@@ -41,24 +53,25 @@ function Project(props) {
         return () => {
             if (vantaEffect) vantaEffect.destroy()
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [props.theme])
 
 
 
-    const { title, description, image, technologies, liveDemo, sourceCode } = props
-    const equivalents = {
-        React: < i class="devicon-react-original colored" ></i>,
-        Css: <i class="devicon-css3-plain colored"></i>,
-        Js: <i class="devicon-javascript-plain colored"></i>,
-        HTML: <i class="devicon-html5-plain colored"></i>,
-        Webpack: <i class="devicon-webpack-plain colored"></i>,
-        Git: <i class="devicon-git-plain colored"></i>,
-        Npm: <i class="devicon-npm-original-wordmark colored"></i>,
-        Firebase: <i class="devicon-firebase-plain colored"></i>,
-        Typescript: <i class="devicon-typescript-plain colored"></i>,
-        Node: <i class="devicon-nodejs-plain-wordmark colored"></i>,
-        Express: < i class="devicon-express-original-wordmark colored" ></i >,
-        Mongo:< i class="devicon-mongodb-plain-wordmark colored" ></i >,
+    const { title, description, image, technologies, liveDemo, sourceCode }: ProjectI = props
+    const equivalents: TechIcon = {
+        React: < i className="devicon-react-original colored" ></i>,
+        Css: <i className="devicon-css3-plain colored"></i>,
+        Js: <i className="devicon-javascript-plain colored"></i>,
+        HTML: <i className="devicon-html5-plain colored"></i>,
+        Webpack: <i className="devicon-webpack-plain colored"></i>,
+        Git: <i className="devicon-git-plain colored"></i>,
+        Npm: <i className="devicon-npm-original-wordmark colored"></i>,
+        Firebase: <i className="devicon-firebase-plain colored"></i>,
+        Typescript: <i className="devicon-typescript-plain colored"></i>,
+        Node: <i className="devicon-nodejs-plain-wordmark colored"></i>,
+        Express: < i className="devicon-express-original-wordmark colored" ></i >,
+        Mongo:< i className="devicon-mongodb-plain-wordmark colored" ></i >,
     }
 
     if (props.side) {

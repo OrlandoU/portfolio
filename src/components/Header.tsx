@@ -1,17 +1,18 @@
-import { useEffect, useRef, useState } from "react"
+import React from "react"
+import { ReactElement, useEffect, useRef, useState } from "react"
 
-function Header(props) {
-    const [scrolled, setScrolled] = useState(window.pageYOffset)
+function Header(props: any): ReactElement {
+    const [scrolled, setScrolled] = useState<boolean>(!!window.pageYOffset)
     const [scrollY, setScrollY] = useState(0)
-    const myRef = useRef()
+    const myRef = useRef<HTMLElement>(null)
 
     useEffect(() => {
         const setState = () => {
             const currentScrollPos = window.pageYOffset;
-            if (currentScrollPos === 0) {
+            if (currentScrollPos === 0 && myRef.current) {
                 myRef.current.classList.add('top')
                 setScrolled(true)
-            } else {
+            } else if(myRef.current) {
                 myRef.current.classList.remove('top')
                 setScrolled(scrollY > currentScrollPos);
             }
@@ -22,15 +23,16 @@ function Header(props) {
     }, [scrollY])
 
     useEffect(()=>{
-        const currentScrollPos = window.pageYOffset;
-        if (currentScrollPos === 0) {
+        const currentScrollPos: number = window.pageYOffset;
+        if (currentScrollPos === 0 && myRef.current) {
             myRef.current.classList.add('top')
             setScrolled(true)
-        } else {
+        } else if(myRef.current) {
             myRef.current.classList.remove('top')
             setScrolled(scrollY > currentScrollPos);
         }
         setScrollY(currentScrollPos);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     return (
@@ -50,7 +52,7 @@ function Header(props) {
                     </li>
                     <li>
                         <a href="https://github.com/OrlandoU" aria-label="View Github Profile">
-                            <i class="devicon-github-original"></i>
+                            <i className="devicon-github-original"></i>
                         </a>
                     </li>
                     <li onClick={props.toggleTheme} className='theme' aria-label="Toggle Theme" tabIndex={0}>

@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import NET from 'vanta/dist/vanta.net.min';
 import '../styles/App.css';
 import About from './About';
@@ -6,11 +6,12 @@ import Banner from './Banner';
 import Contact from './Contact';
 import Header from './Header';
 import Projects from './Projects';
+import React from 'react';
 
-function App() {
-  const [vantaEffect, setVantaEffect] = useState(null)
-  const [theme, setTheme] = useState()
-  const myRef = useRef(null)
+function App(): JSX.Element {
+  const [vantaEffect, setVantaEffect] = useState<any>(null)
+  const [theme, setTheme] = useState<boolean>(false)
+  const myRef = useRef<HTMLElement>(null)
 
   const toggleTheme = () =>{
     setTheme(prev=>!prev)
@@ -50,6 +51,7 @@ function App() {
     return () => {
       if (vantaEffect) vantaEffect.destroy()
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [theme])
 
   return (

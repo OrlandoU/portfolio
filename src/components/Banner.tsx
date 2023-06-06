@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react"
+import React, { ForwardedRef } from "react"
 import { Fade } from "react-reveal"
 
-const Banner = React.forwardRef((props, ref) => {
+
+
+const Banner = React.forwardRef<HTMLElement>((props, ref: ForwardedRef<HTMLElement>): JSX.Element => {
 
     return (
         <section className="banner" ref={ref}>

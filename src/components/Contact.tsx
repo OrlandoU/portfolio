@@ -1,7 +1,7 @@
+import React, { ReactElement } from "react"
 import { Fade } from "react-reveal"
 
-function Contact() {
-
+function Contact(): ReactElement {
     return (
         <Fade cascade top>
             <section className="contact" id="contact">
