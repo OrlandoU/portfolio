@@ -23,9 +23,12 @@ function Projects(props: {theme: boolean}): ReactElement {
             title: "OdinBook",
             description: (
                 <>
-                    <p>In the "Odin Book" project, a replica of Facebook, the technologies used include the <strong>MERN stack</strong> (MongoDB, Express.js, React, and Node.js) with <strong>Mongoose</strong> for data modeling, <strong>Passport</strong> for authentication, <strong>Firebase</strong> for image storage, and <strong>TypeScript</strong> on the backend.</p>
-                    <p>React Routing was employed for client-side routing, allowing for dynamic page rendering based on user actions. Firebase served as a secure storage solution for user profiles, posts, and followers. Firebase Authentication ensured secure user login functionality.</p>
-                    <p>By integrating these technologies, a feature-rich social media platform, the "Odin Book," was created. It demonstrates proficiency in the MERN stack, along with the ability to integrate additional technologies for specific functionalities. The result is a reliable and secure platform that replicates the core features of Facebook.</p>
+                    <p>In the "Odin Book" project, a replica of Facebook, the technologies used include the <strong>MERN stack</strong> (MongoDB, Express.js, React, and Node.js) with <strong>Mongoose</strong> for data modeling, <strong>Passport</strong> for authentication, and <strong>TypeScript</strong> on the backend.</p>
+                    <p>React Routing was employed for client-side routing, enabling dynamic page rendering based on user actions.</p>
+                    <p>For the backend, <strong>Express.js</strong> with <strong>Node.js</strong> and <strong>TypeScript</strong> were used to handle server-side operations, data management, and API endpoints.</p>
+                    <p>Image storage was handled using <strong>Firebase</strong>, providing a secure solution for storing user profile pictures, posts, and other images in the application.</p>
+                    <p>By integrating these technologies, the "Odin Book" project successfully created a feature-rich social media platform. It demonstrates proficiency in the MERN stack and showcases the ability to leverage additional technologies for specific functionalities. The result is a reliable and secure platform that replicates the core features of Facebook.</p>
+
                 </>
             ),
             image: odinbookImg,
