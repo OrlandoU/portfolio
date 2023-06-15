@@ -1,21 +1,28 @@
-import React, { ForwardedRef } from "react"
+import React from "react"
 import { Fade } from "react-reveal"
 
 
 
-const Banner = React.forwardRef<HTMLElement>((props, ref: ForwardedRef<HTMLElement>): JSX.Element => {
-
+function Banner(): JSX.Element {
     return (
-        <section className="banner" ref={ref}>
-            <div className="name">
-                <Fade cascade right><span>Orlando</span></Fade> <Fade cascade right><span>Jose</span></Fade> <Fade cascade right><span>Umanzor</span></Fade> <Fade cascade right><span>Zelaya</span></Fade>
+        <section className="banner">
+            <div className="banner-header">
+
+                <div className="name">
+                    <Fade cascade delay={1000} duration={2000}><span>Orlando </span></Fade>
+                    <Fade cascade delay={1000} duration={2000}><span>Jose </span></Fade>
+                    <Fade cascade delay={1000} duration={2000}><span>Umanzor </span></Fade>
+                    <Fade cascade delay={1000} duration={2000}><span>Zelaya </span></Fade>
+                </div>
+                <div className="position">
+                    <Fade cascade delay={1000} duration={2000}><span>Full </span></Fade>
+                    <Fade cascade delay={1000} duration={2000}><span>Stack </span></Fade>
+                    <Fade cascade delay={1000} duration={2000}><span>Developer</span></Fade>
+                </div>
+
             </div>
-            <div className="position">Full Stack Developer</div>
-            <a href="#about" className="banner-svg-container">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="banner-svg"><title>Scroll to About Section</title><path d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z" /></svg>
-            </a>
         </section>
     )
-})
+}
 
 export default Banner

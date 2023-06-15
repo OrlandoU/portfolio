@@ -1,23 +1,32 @@
 import Project from "./Project"
 import twitterImg from '../assets/twitter.png'
+import twitter2Img from '../assets/twitter2.png'
+import twitter3Img from '../assets/twitter3.png'
 import ResumeImg from '../assets/Resume.png'
-import todoImg from '../assets/TO-DO.png'
+import todoImg from '../assets/todo.png'
+import todo2Img from '../assets/todo2.png'
+import todo3Img from '../assets/todo3.png'
 import shopImg from '../assets/Shop.png'
 import weatherImg from '../assets/Weather.png'
 import odinbookImg from '../assets/odinbook.png'
-import { ReactElement } from "react"
+import odinbook2Img from '../assets/odinbook2.png'
+import odinbook3Img from '../assets/odinbook3.png'
+import { ReactElement, useEffect } from "react"
 import React from "react"
+import { useInView } from "react-intersection-observer"
 
 export interface ProjectI {
     title: string;
     description: JSX.Element;
-    image: string;
+    image: string[];
     technologies: string[];
     liveDemo: string;
     sourceCode: string;
 }
 
-function Projects(props: {theme: boolean}): ReactElement {
+function Projects(): ReactElement {
+    const [ref, inView] = useInView({threshold: 0.2})
+
     const projects: ProjectI[] = [
         {
             title: "OdinBook",
@@ -28,7 +37,7 @@ function Projects(props: {theme: boolean}): ReactElement {
                     <p>By integrating these technologies, a feature-rich social media platform, the "Odin Book," was created. It demonstrates proficiency in the MERN stack, along with the ability to integrate additional technologies for specific functionalities. The result is a reliable and secure platform that replicates the core features of Facebook.</p>
                 </>
             ),
-            image: odinbookImg,
+            image: [odinbookImg, odinbook2Img, odinbook3Img],
             technologies: ["React", "Node", 'Mongo' , "Typescript", 'Css', 'Firebase', 'Git', 'Npm', 'Express'],
             liveDemo: "https://orlandou.github.io/odin-book/",
             sourceCode: "https://github.com/OrlandoU/odin-book",
@@ -41,7 +50,7 @@ function Projects(props: {theme: boolean}): ReactElement {
                     <p>Overall, this project highlights my proficiency in <strong>React Routing</strong> and <strong>Firebase</strong>, as well as my ability to integrate different technologies to build a functional application. The final result is a fully functional Twitter replica that provides a reliable and secure platform for users to interact and share content.</p>
                 </>
             ),
-            image: twitterImg,
+            image: [twitterImg, twitter2Img, twitter3Img],
             technologies: ["React", 'Css', 'Firebase', 'Git', 'Npm'],
             liveDemo: "https://orlandou.github.io/twitter-replication-project/",
             sourceCode: "https://github.com/OrlandoU/twitter-replication-project",
@@ -54,7 +63,7 @@ function Projects(props: {theme: boolean}): ReactElement {
                     <p>With this project, users can create a polished and professional resume with just a few clicks. The application's intuitive interface guides users through the process of filling out the necessary fields to generate a customized resume. Overall, this project demonstrates my skills in <strong>React</strong> and my ability to create practical applications that can improve the productivity of users.</p>
                 </>
             ),
-            image: ResumeImg,
+            image: [ResumeImg],
             technologies: ["React", 'Css', 'Npm', 'Git'],
             liveDemo: "https://orlandou.github.io/cv-project/",
             sourceCode: "https://github.com/OrlandoU/cv-project",
@@ -67,7 +76,7 @@ function Projects(props: {theme: boolean}): ReactElement {
                     <p>The todo list application uses <strong>JavaScript modules</strong> to keep the code organized and maintainable, allowing for easy updates and modifications. <strong>Firebase</strong> is used to store all the tasks securely, ensuring that users can access their tasks from anywhere and on any device.</p>
                 </>
             ),
-            image: todoImg,
+            image: [todoImg, todo2Img ],
             technologies: ['Js', "HTML", "Css", 'Firebase', 'Npm', "Git"],
             liveDemo: "https://orlandou.github.io/shopping-cart-project/",
             sourceCode: "https://github.com/OrlandoU/shopping-cart-project",
@@ -80,7 +89,7 @@ function Projects(props: {theme: boolean}): ReactElement {
                     <p>The application provides a user-friendly interface, making it convenient for users to shop online and complete their transactions with ease.</p>
                 </>
             ),
-            image: shopImg,
+            image: [shopImg],
             technologies: ['React', "Css", 'Npm', "Git"],
             liveDemo: "https://orlandou.github.io/todo-list-project/",
             sourceCode: "https://github.com/OrlandoU/todo-list-project",
@@ -95,7 +104,7 @@ function Projects(props: {theme: boolean}): ReactElement {
 
                 </>
             ),
-            image: weatherImg,
+            image: [weatherImg],
             technologies: ['Js', "HTML", "Css", 'Webpack', 'Npm', "Git"],
             liveDemo: "https://orlandou.github.io/weather-app/",
             sourceCode: "https://github.com/OrlandoU/weather-app",
@@ -104,12 +113,12 @@ function Projects(props: {theme: boolean}): ReactElement {
     ]
 
     return (
-        <section className="projects" id="projects">
-            <h2 className="title">Featured Projects</h2>
+        <section className="projects" id="projects" ref={ref}>
+            <h2 className="title"><span>Featured Projects</span></h2>
             <div className="projects-wrapper">
                 <ul className="projects-list">
                     {projects.map((project, index) => (
-                        <Project key={index} {...project} side={index % 2 === 0} theme={props.theme} />
+                        <Project key={index} {...project} side={index % 2 === 0} index={index}/>
                     ))}
                 </ul>
             </div>
