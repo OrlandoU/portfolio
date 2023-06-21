@@ -25,7 +25,7 @@ export interface ProjectI {
 }
 
 function Projects(): ReactElement {
-    const [ref, inView] = useInView({threshold: 0.2})
+    const [ref, inView] = useInView({ threshold: 0.2 })
 
     const projects: ProjectI[] = [
         {
@@ -38,7 +38,7 @@ function Projects(): ReactElement {
                 </>
             ),
             image: [odinbookImg, odinbook2Img, odinbook3Img],
-            technologies: ["React", "Node", 'Mongo' , "Typescript", 'Css', 'Firebase', 'Git', 'Npm', 'Express'],
+            technologies: ["React", "Node", 'Mongo', "Typescript", 'Css', 'Firebase', 'Git', 'Npm', 'Express'],
             liveDemo: "https://orlandou.github.io/odin-book/",
             sourceCode: "https://github.com/OrlandoU/odin-book",
         },
@@ -76,7 +76,7 @@ function Projects(): ReactElement {
                     <p>The todo list application uses <strong>JavaScript modules</strong> to keep the code organized and maintainable, allowing for easy updates and modifications. <strong>Firebase</strong> is used to store all the tasks securely, ensuring that users can access their tasks from anywhere and on any device.</p>
                 </>
             ),
-            image: [todoImg, todo2Img ],
+            image: [todoImg, todo2Img],
             technologies: ['Js', "HTML", "Css", 'Firebase', 'Npm', "Git"],
             liveDemo: "https://orlandou.github.io/shopping-cart-project/",
             sourceCode: "https://github.com/OrlandoU/shopping-cart-project",
@@ -113,12 +113,15 @@ function Projects(): ReactElement {
     ]
 
     return (
-        <section className="projects" id="projects" ref={ref}>
-            <h2 className="title"><span>Featured Projects</span></h2>
-            <div className="projects-wrapper">
-                <ul className="projects-list">
+        <section id="projects" ref={ref}>
+            <h2 className="flex z-10 bg-indigo-700 text-white p-2 gap-4 justify-center text-2xl md:text-4xl lg:text-3xl relative flex-wrap px-6 mb-[48px] shadow-[0_0_10px_4px_rgba(0,0,0,0.5)]">
+                <span>Featured Projects</span>
+                <span className="absolute inset-0 h-1 -top-1.5 z-10 bg-indigo-700"></span>
+            </h2>
+            <div>
+                <ul className="flex flex-col gap-[126px] items-center">
                     {projects.map((project, index) => (
-                        <Project key={index} {...project} side={index % 2 === 0} index={index}/>
+                        <Project key={index} {...project} side={index % 2 === 0} index={index} />
                     ))}
                 </ul>
             </div>

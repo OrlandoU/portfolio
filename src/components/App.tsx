@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import TOPOLOGY from 'vanta/dist/vanta.topology.min';
-import '../styles/App.css';
+import '../styles/output.css';
 import About from './About';
 import Banner from './Banner';
 import Contact from './Contact';
@@ -49,13 +49,13 @@ function App(): JSX.Element {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  console.log(vantaEffect)
   return (
-    <div className="App">
-      <div className="background" ref={myRef}></div>
+    <div className='font-["Source_Sans_Pro"] bg-[#E6FFFF]'>
+      <div ref={myRef} className='fixed top-0 left-0 w-screen h-screen -z-1'></div>
       <Banner />
       <About />
       <Projects />
+      <Contact />
     </div>
   );
 }

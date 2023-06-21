@@ -7,15 +7,6 @@ function About(): JSX.Element {
     const [, setViewed] = useState<boolean>()
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 })
 
-    const handleColored: React.MouseEventHandler = (e: React.MouseEvent) => {
-        let element: HTMLElement = e.target as HTMLElement
-        element.classList.add('colored')
-    }
-
-    const handleUnColored: React.MouseEventHandler = (e: React.MouseEvent) => {
-        let element: HTMLElement = e.target as HTMLElement
-        element.classList.remove('colored')
-    }
 
     useEffect(() => {
         if (inView) {
@@ -24,26 +15,9 @@ function About(): JSX.Element {
     }, [inView])
 
     return (
-        <section id="about" className="about" ref={ref}>
-            <div className="about-wrapper">
-                <Fade cascade left delay={400}>
-                    <div className="my-thecs">
-                        <i onMouseOver={handleColored} onMouseLeave={handleUnColored} className="devicon-javascript-plain" ></i>
-                        <i onMouseOver={handleColored} onMouseLeave={handleUnColored} className="devicon-css3-plain " ></i>
-                        <i onMouseOver={handleColored} onMouseLeave={handleUnColored} className="devicon-html5-plain " ></i>
-                        <i onMouseOver={handleColored} onMouseLeave={handleUnColored} className="devicon-react-original " ></i>
-                        <i onMouseOver={handleColored} onMouseLeave={handleUnColored} className="devicon-webpack-plain "></i>
-                        <i onMouseOver={handleColored} onMouseLeave={handleUnColored} className="devicon-firebase-plain " ></i>
-                        <i onMouseOver={handleColored} onMouseLeave={handleUnColored} className="devicon-jest-plain "  ></i>
-                        <i onMouseOver={handleColored} onMouseLeave={handleUnColored} className="devicon-npm-original-wordmark "></i>
-                        <i onMouseOver={handleColored} onMouseLeave={handleUnColored} className="devicon-git-plain "  ></i>
-                        <i onMouseOver={handleColored} onMouseLeave={handleUnColored} className="devicon-typescript-plain "></i>
-                        <i onMouseOver={handleColored} onMouseLeave={handleUnColored} className="devicon-nodejs-plain-wordmark "></i>
-                        < i onMouseOver={handleColored} onMouseLeave={handleUnColored} className="devicon-express-original" ></i>
-                        < i onMouseOver={handleColored} onMouseLeave={handleUnColored} className="devicon-mongodb-plain-wordmark " ></i >
-                    </div>
-                </Fade>
-                <div className="left-about">
+        <section id="about" ref={ref} className="relative z-10 min-h-screen bg-white py-12 flex flex-col shadow-[0_0_50px_1px_rgba(0,0,0,0.3)]">
+            <div className="flex-auto flex justify-center items-center ">
+                <div className="md:max-w-[80%] lg:max-w-[50%] md:px-4 px-4">
                     <p>I am Orlando Umanzor, a self-taught Front-End Developer specializing in HTML, CSS, JavaScript, React, Node.js, and MongoDB. With a strong passion for web development and continuous learning, I am dedicated to creating engaging and user-friendly web applications.</p>
                     <br />
                     <p>Through self-study and personal projects, I have honed my skills in building responsive and dynamic web experiences. I thrive on challenges and embrace innovative solutions with a problem-solving mindset. Adapting to new technologies is second nature to me, and I thrive in fast-paced and collaborative environments.</p>
