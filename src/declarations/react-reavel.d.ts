@@ -34,7 +34,7 @@ interface RevealProps {
     unmountOnExit?: boolean;
     wait?: number;
     when?: boolean;
-    triggerOnce?: boolean
+    triggerOnce?: boolean,
 }
 
 declare module 'react-reveal/Bounce' {
