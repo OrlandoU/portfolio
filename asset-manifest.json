@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.afcdbdec.css",
-    "main.js": "/portfolio/static/js/main.0053b5be.js",
+    "main.css": "/portfolio/static/css/main.04fa1ef9.css",
+    "main.js": "/portfolio/static/js/main.aa1d146a.js",
     "static/media/Weather.png": "/portfolio/static/media/Weather.2d876292b96e2ac0a564.png",
     "static/media/Shop.png": "/portfolio/static/media/Shop.dfc3afe49577c4002612.png",
     "static/media/odinbook.png": "/portfolio/static/media/odinbook.39792da0b0b5f1ca0d4c.png",
@@ -14,11 +14,11 @@
     "static/media/todo.png": "/portfolio/static/media/todo.30745a8c33fa5acaf200.png",
     "static/media/Resume.png": "/portfolio/static/media/Resume.63a84ffbe3c0498a0108.png",
     "index.html": "/portfolio/index.html",
-    "main.afcdbdec.css.map": "/portfolio/static/css/main.afcdbdec.css.map",
-    "main.0053b5be.js.map": "/portfolio/static/js/main.0053b5be.js.map"
+    "main.04fa1ef9.css.map": "/portfolio/static/css/main.04fa1ef9.css.map",
+    "main.aa1d146a.js.map": "/portfolio/static/js/main.aa1d146a.js.map"
   },
   "entrypoints": [
-    "static/css/main.afcdbdec.css",
-    "static/js/main.0053b5be.js"
+    "static/css/main.04fa1ef9.css",
+    "static/js/main.aa1d146a.js"
   ]
 }
