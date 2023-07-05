@@ -14,7 +14,8 @@ interface Options {
     backgroundColor?: number,
     scaleMobile?: number,
     showLines?: boolean,
-    showDots?: boolean
+    showDots?: boolean,
+    forceAnimate?: boolean
 }
 
 declare module 'vanta/dist/vanta.dots.min' {
