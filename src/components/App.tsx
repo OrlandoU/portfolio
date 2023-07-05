@@ -25,7 +25,8 @@ function App(): JSX.Element {
         scaleMobile: 1.00,
         color: 0x6a3bd4,
         backgroundColor: 0xe6ffff,
-        showDots: false
+        showDots: false,
+        forceAnimate: true
       }))
     } else {
       vantaEffect.destroy()
@@ -40,7 +41,8 @@ function App(): JSX.Element {
         scaleMobile: 1.00,
         color: 0x6a3bd4,
         backgroundColor: 0xe6ffff,
-        showDots: false
+        showDots: false,
+        forceAnimate: true
       }))
     }
     return () => {

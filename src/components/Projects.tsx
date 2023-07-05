@@ -81,8 +81,9 @@ function Projects(): ReactElement {
             ),
             image: [todoImg, todo2Img],
             technologies: ['Js', "HTML", "Css", 'Firebase', 'Npm', "Git"],
-            liveDemo: "https://orlandou.github.io/shopping-cart-project/",
-            sourceCode: "https://github.com/OrlandoU/shopping-cart-project",
+            liveDemo: "https://orlandou.github.io/todo-list-project/",
+            sourceCode: "https://github.com/OrlandoU/todo-list-project",
+            
         },
         {
             title: "Shopping Cart",
@@ -94,8 +95,8 @@ function Projects(): ReactElement {
             ),
             image: [shopImg],
             technologies: ['React', "Css", 'Npm', "Git"],
-            liveDemo: "https://orlandou.github.io/todo-list-project/",
-            sourceCode: "https://github.com/OrlandoU/todo-list-project",
+            liveDemo: "https://orlandou.github.io/shopping-cart-project/",
+            sourceCode: "https://github.com/OrlandoU/shopping-cart-project",
         },
         {
             title: "Weather App",
