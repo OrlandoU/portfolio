@@ -92,8 +92,6 @@ function Projects(): ReactElement {
             ),
             image: [shopImg],
             technologies: ['React', "Css", 'Npm', "Git"],
-            liveDemo: "https://orlandou.github.io/todo-list-project/",
-            sourceCode: "https://github.com/OrlandoU/todo-list-project",
             liveDemo: "https://orlandou.github.io/shopping-cart-project/",
             sourceCode: "https://github.com/OrlandoU/shopping-cart-project",
         },
