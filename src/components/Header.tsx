@@ -1,5 +1,5 @@
 import React from "react"
-import { ReactElement, useEffect, useRef, useState } from "react"
+import { ReactElement, useRef } from "react"
 
 function Header(props: any): ReactElement {
     const myRef = useRef<HTMLElement>(null)
