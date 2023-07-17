@@ -4,8 +4,8 @@ import { Fade } from "react-reveal"
 function Contact(): ReactElement {
     return (
         <Fade cascade top>
-            <section id="contact" className="mt-[126px] bg-indigo-700 z-10 relative flex flex-col p-4 text-white pb-5">
-                <h2 className="text-center m-0 text-xl md:text-3xl font-thin md:leading-[24px]">Contact</h2>
+            <section id="contact" className="bg-indigo-700 z-10 relative flex flex-col p-4 text-white pb-5">
+                <h2 className="text-center m-0 text-xl md:text-3xl font-thin">Contact</h2>
                 <p className="text-center m-0 font-thin text-md md:text-lg leading-[18px] md:leading-[24px]">Feel free to reach out to me through any of the following channels:</p>
                 <ul className="h-6 flex items-center justify-center mt-5 gap-2">
                     <li className="">

@@ -3,7 +3,7 @@
 
 interface RevealProps {
     fraction?: number;
-    children?: JSX.Element;   
+    children?: JSX.Element[] | JSX.Element;   
     appear?: boolean; 
     bottom?: boolean
     cascade?: boolean;     

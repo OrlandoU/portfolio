@@ -2,16 +2,22 @@ import Project from "./Project"
 import twitterImg from '../assets/twitter.png'
 import twitter2Img from '../assets/twitter2.png'
 import twitter3Img from '../assets/twitter3.png'
-import ResumeImg from '../assets/Resume.png'
+import resume1Img from '../assets/resume1.png'
+import resume2Img from '../assets/resume2.png'
+import resume3Img from '../assets/resume3.png'
 import todoImg from '../assets/todo.png'
 import todo2Img from '../assets/todo2.png'
 import todo3Img from '../assets/todo3.png'
 import shopImg from '../assets/Shop.png'
+import shop2Img from '../assets/shop2.png'
 import weatherImg from '../assets/Weather.png'
+import weather2Img from '../assets/weather2.png'
+import weather3Img from '../assets/weather3.png'
 import odinbookImg from '../assets/odinbook.png'
 import odinbook2Img from '../assets/odinbook2.png'
 import odinbook3Img from '../assets/odinbook3.png'
-import { ReactElement, useEffect } from "react"
+import shop3img from '../assets/shop3.png'
+import { ReactElement } from "react"
 import React from "react"
 import { useInView } from "react-intersection-observer"
 
@@ -66,7 +72,7 @@ function Projects(): ReactElement {
                     <p>With this project, users can create a polished and professional resume with just a few clicks. The application's intuitive interface guides users through the process of filling out the necessary fields to generate a customized resume. Overall, this project demonstrates my skills in <strong>React</strong> and my ability to create practical applications that can improve the productivity of users.</p>
                 </>
             ),
-            image: [ResumeImg],
+            image: [resume1Img, resume2Img, resume3Img],
             technologies: ["React", 'Css', 'Npm', 'Git'],
             liveDemo: "https://orlandou.github.io/cv-project/",
             sourceCode: "https://github.com/OrlandoU/cv-project",
@@ -79,7 +85,7 @@ function Projects(): ReactElement {
                     <p>The todo list application uses <strong>JavaScript modules</strong> to keep the code organized and maintainable, allowing for easy updates and modifications. <strong>Firebase</strong> is used to store all the tasks securely, ensuring that users can access their tasks from anywhere and on any device.</p>
                 </>
             ),
-            image: [todoImg, todo2Img],
+            image: [todoImg, todo2Img, todo3Img],
             technologies: ['Js', "HTML", "Css", 'Firebase', 'Npm', "Git"],
             liveDemo: "https://orlandou.github.io/todo-list-project/",
             sourceCode: "https://github.com/OrlandoU/todo-list-project",
@@ -93,7 +99,7 @@ function Projects(): ReactElement {
                     <p>The application provides a user-friendly interface, making it convenient for users to shop online and complete their transactions with ease.</p>
                 </>
             ),
-            image: [shopImg],
+            image: [shopImg, shop2Img, shop3img],
             technologies: ['React', "Css", 'Npm', "Git"],
             liveDemo: "https://orlandou.github.io/shopping-cart-project/",
             sourceCode: "https://github.com/OrlandoU/shopping-cart-project",
@@ -108,7 +114,7 @@ function Projects(): ReactElement {
 
                 </>
             ),
-            image: [weatherImg],
+            image: [weatherImg,weather2Img, weather3Img],
             technologies: ['Js', "HTML", "Css", 'Webpack', 'Npm', "Git"],
             liveDemo: "https://orlandou.github.io/weather-app/",
             sourceCode: "https://github.com/OrlandoU/weather-app",
@@ -118,8 +124,8 @@ function Projects(): ReactElement {
 
     return (
         <section id="projects" ref={ref}>
-            <h2 className="flex z-10 bg-indigo-700 text-white p-2 gap-4 justify-center text-2xl md:text-4xl lg:text-3xl relative flex-wrap px-6 mb-[48px] shadow-[0_0_10px_4px_rgba(0,0,0,0.5)]">
-                <span>Featured Projects</span>
+            <h2 className="flex z-10 bg-indigo-700 mt-8 font-sans text-white p-2 gap-4 justify-center text-2xl md:text-4xl lg:text-3xl relative flex-wrap px-6 mb-[48px] shadow-[0_0_10px_4px_rgba(0,0,0,0.5)]">
+                <span className=" font-bold">Featured Projects</span>
                 <span className="absolute inset-0 h-1 -top-1.5 z-10 bg-indigo-700"></span>
             </h2>
             <div>
