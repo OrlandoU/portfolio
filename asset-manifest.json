@@ -1,24 +1,33 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.04fa1ef9.css",
-    "main.js": "/portfolio/static/js/main.aa1d146a.js",
+    "main.css": "/portfolio/static/css/main.b30dc029.css",
+    "main.js": "/portfolio/static/js/main.f5b10ef1.js",
     "static/media/Weather.png": "/portfolio/static/media/Weather.2d876292b96e2ac0a564.png",
     "static/media/Shop.png": "/portfolio/static/media/Shop.dfc3afe49577c4002612.png",
     "static/media/odinbook.png": "/portfolio/static/media/odinbook.39792da0b0b5f1ca0d4c.png",
+    "static/media/weather2.png": "/portfolio/static/media/weather2.dbd2f36d3e7b22f77fd9.png",
     "static/media/odinbook2.png": "/portfolio/static/media/odinbook2.7b86e7330fbe37e39ed0.png",
+    "static/media/shop2.png": "/portfolio/static/media/shop2.b5e842e0efc03ed33206.png",
     "static/media/twitter2.png": "/portfolio/static/media/twitter2.33f2da271b6d8986f3dc.png",
+    "static/media/shop3.png": "/portfolio/static/media/shop3.d0cfbe2e6dad32151d8e.png",
     "static/media/twitter.png": "/portfolio/static/media/twitter.228b1efa7afc82a23ed9.png",
     "static/media/twitter3.png": "/portfolio/static/media/twitter3.c6ef6f74476cc6f8416d.png",
     "static/media/odinbook3.png": "/portfolio/static/media/odinbook3.452a0a196b696b5ee7b3.png",
-    "static/media/todo2.png": "/portfolio/static/media/todo2.44a178e788e983d11f0c.png",
+    "static/media/weather3.png": "/portfolio/static/media/weather3.032655d591f8cfdd46b2.png",
     "static/media/todo.png": "/portfolio/static/media/todo.30745a8c33fa5acaf200.png",
-    "static/media/Resume.png": "/portfolio/static/media/Resume.63a84ffbe3c0498a0108.png",
+    "static/media/todo3.png": "/portfolio/static/media/todo3.d1192b63fee21a188b6c.png",
+    "static/media/resume1.png": "/portfolio/static/media/resume1.63a84ffbe3c0498a0108.png",
+    "static/media/resume3.png": "/portfolio/static/media/resume3.455400ea5f2ec536231d.png",
+    "static/media/resume2.png": "/portfolio/static/media/resume2.59882cb1592fa8fb67a1.png",
+    "static/media/cs50.webp": "/portfolio/static/media/cs50.dc3ae0563481f4a1d9b2.webp",
+    "static/media/logo.png": "/portfolio/static/media/logo.6614f85e4389a4d9ad6e.png",
+    "static/media/todo2.png": "/portfolio/static/media/todo2.2ab0e804265a314e1561.png",
     "index.html": "/portfolio/index.html",
-    "main.04fa1ef9.css.map": "/portfolio/static/css/main.04fa1ef9.css.map",
-    "main.aa1d146a.js.map": "/portfolio/static/js/main.aa1d146a.js.map"
+    "main.b30dc029.css.map": "/portfolio/static/css/main.b30dc029.css.map",
+    "main.f5b10ef1.js.map": "/portfolio/static/js/main.f5b10ef1.js.map"
   },
   "entrypoints": [
-    "static/css/main.04fa1ef9.css",
-    "static/js/main.aa1d146a.js"
+    "static/css/main.b30dc029.css",
+    "static/js/main.f5b10ef1.js"
   ]
 }
